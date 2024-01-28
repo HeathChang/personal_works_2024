@@ -1,32 +1,22 @@
 // URL > https://www.acmicpc.net/problem/11758
-// 위에 쌓을때
-const solution = (containerAmount) => {
-    const containerLength = 40;
-    const containerHeight = 8;
-    const spaceBetweenColumn = 4;
-    const spaceBetweenRows = 2;
-
+// 위에 쌓지않을때
+const solution = (count) => {
     let bestArea = Number.MAX_SAFE_INTEGER;
-    let bestLength = 0;
+    let bestWidth = 0;
     let bestHeight = 0;
-
-    const share = Math.ceil(containerAmount / 5);
-    for (let a = 1; a <= share; a++) {
-        let horCount = Math.ceil(share / a);
-        let verCount = Math.ceil(share / horCount);
-
-        const tempLength = ((containerLength * horCount + (horCount - 1) * spaceBetweenColumn) + 8);
-        const tempHeight = ((containerHeight * verCount + (verCount - 1) * spaceBetweenRows) + 4);
-        const tempArea = tempLength * tempHeight;
-
-        if (tempArea < bestArea || (tempArea === bestArea && tempLength - tempHeight < bestLength - bestHeight)) {
-            bestArea = tempArea;
-            bestLength = tempLength;
-            bestHeight = tempHeight;
-        } // end if
-
-    } //end for
-    return `${bestLength} X ${bestHeight} = ${bestArea}`;
+    for (let a = 1; a <= 5; a++) {
+        let horCount = Math.ceil(count / a); // 5
+        let verCount = Math.ceil(count / horCount); // 5
+        const w = ((40 * horCount + (horCount - 1) * 4) + 8);
+        const h = ((8 * verCount) + (verCount - 1) * 2 + 4);
+        const area = w * h
+        if( area < bestArea || (area === bestArea && h - w < bestHeight - bestWidth))  {
+            bestArea = area
+            bestWidth = w
+            bestHeight = h
+        }
+    }
+    return `${bestWidth} X ${bestHeight} = ${bestArea}`
 };
 
 const question = "6\n" +
