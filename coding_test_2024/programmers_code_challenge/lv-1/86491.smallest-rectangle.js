@@ -1,6 +1,7 @@
 // URL > https://school.programmers.co.kr/learn/courses/30/lessons/86491
 
 const solution = (sizes) => {
+    //  내가 푼 코드
     let largest = 0;
     const arr = [];
     for (let i = 0; i < sizes.length; i++) {
@@ -9,9 +10,9 @@ const solution = (sizes) => {
     }
     return largest * arr.reduce((acc, val) => acc > val ? acc : val, 0);
 
-    // 바뀐 코드
+    //  참조한 코드
     // 각 명함을 [가로, 세로] 형태로 정규화하여 가로가 항상 세로보다 크거나 같도록 조정
-    const normalizedSizes = sizes.map(([ w, h ]) => w >= h ? [ w, h ] : [ h, w ]);
+    const normalizedSizes = sizes.map(([w, h]) => w >= h ? [w, h] : [h, w]);
 
     // 정규화된 명함 크기에서 가장 긴 가로와 세로 길이를 찾음
     const maxWidth = Math.max(...normalizedSizes.map(size => size[0]));
