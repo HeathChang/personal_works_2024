@@ -1,7 +1,14 @@
 // URL >
 
 const solution = (n) => {
-    return n.split("")
+    let result = 0;
+    const arr = n.split("");
+
+    for (let i = 0; i < arr.length; i++) {
+
+    }
+
+    return result;
 };
 
-console.log("result:: ", solution(Zbcdefg));
+console.log("result:: ", solution("ABCDEF"));
