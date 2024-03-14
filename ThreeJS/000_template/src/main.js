@@ -15,16 +15,15 @@ const init = () => {
     document.body.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, //field-of-view(시야각) > 얼마큼의 시야각으로 물체를 바라볼지, 넓을 수록 더 많이 담김
-        window.innerWidth / window.innerHeight, // 종횡비 >
-        1, // near > 얼마나 가까이 보이는지
-        500, // far > 얼마나 멀리 보이는지
+    const camera = new THREE.PerspectiveCamera(75,
+        window.innerWidth / window.innerHeight,
+        1,
+        500,
     );
     camera.position.z = 5;
 
 
     const render = () => {
-
         renderer.render(scene, camera);
         requestAnimationFrame(render);
     };
