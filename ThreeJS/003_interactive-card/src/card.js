@@ -15,8 +15,13 @@ class Card {
             .lineTo(-(x + radius), y, radius, Math.PI / 2, true)
             .absarc(-x, y, radius, Math.PI, Math.PI / 2, true);
 
-        const geometry = new THREE.ShapeGeometry(shape);
-        const material = new THREE.MeshStandardMaterial({color, side: THREE.DoubleSide}); // 정면만 렌더링
+        // const geometry = new THREE.ShapeGeometry(shape);
+        const options = {
+            depth: 0.01, // 두께감
+            bbevelThickness: 0.1, // 경계
+        };
+        const geometry = new THREE.ExtrudeGeometry(shape, options);
+        const material = new THREE.MeshStandardMaterial({color: color, side: THREE.DoubleSide}); // 정면만 렌더링
 
         const mesh = new THREE.Mesh(geometry, material);
 
