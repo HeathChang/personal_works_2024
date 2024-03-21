@@ -2,11 +2,25 @@
 
 const solution = (dartResult) => {
     const split = dartResult.split("");
-    for (let i = 0; i < split.length; i++) {
-        if (typeof +split[i] === 'number' && isFinite(+split[i])) {
-            
+    const firstRound = "";
+    const secondRound = "";
+    const thirdRound = "";
+
+    const isNumber = value => typeof value === "number" && !isNaN(value);
+    let cound = 1;
+
+    for(let i = split.length - 1 ; i >= 0; i--){
+        if(isNumber(split[i])){
+            // 숫자인 경우
+            // 계산?
+        } else {
+            if(split[i] === "T"){}
+            else if(){}
+            else if(){}
+
         }
     }
+
 
 };
 
