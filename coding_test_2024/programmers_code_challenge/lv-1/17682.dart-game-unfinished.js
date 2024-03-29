@@ -15,8 +15,8 @@ const solution = (dartResult) => {
             // 계산?
         } else {
             if(split[i] === "T"){}
-            else if(){}
-            else if(){}
+            // else if(){}
+            // else if(){}
 
         }
     }
