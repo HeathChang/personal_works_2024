@@ -10,14 +10,15 @@ const solution = (wallpaper) => {
     for (let i = 0; i < wallpaper.length; i++) {
         for (let j = 0; j < wallpaper[i].length; j++) {
             if (wallpaper[i][j] === "#") {
-                if(xMin > i) xMin = i; //-1
-                else if(xMax < i+1) xMax = i+1;
-                if(yMin > j) yMin = j;
-                else if(yMax < j+1) yMax = j+1;
+                if (xMin > i) xMin = i; //-1
+                else if (xMax < i + 1) xMax = i + 1;
+                if (yMin > j) yMin = j;
+                else if (yMax < j + 1) yMax = j + 1;
             }
         }
     }
-    return [xMin, yMin, xMax, yMax]
+    if (yMin >= yMax) return [ xMin, yMin, xMin + 1, yMin + 1 ];
+    return [ xMin, yMin, xMax, yMax ];
 };
 
 
