@@ -1,5 +1,4 @@
 // URL > https://school.programmers.co.kr/learn/courses/30/lessons/140108
-// 문제 이해 못함.
 const solution = (s) => {
     let count = 0;
     let first = s[0];
