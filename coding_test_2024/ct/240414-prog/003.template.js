@@ -1,10 +1,19 @@
 // URL >
 
 const solution = (products, purchased) => {
+    /*
+    * How To Solve (HTS)
+    * 1. 전체 products에서, 구매한 적이있는 purchased 를 빼서, unpurchased 찾기
+    * 2. purchased에서 추천 목록 찾기
+    * 3. unpurchased에서 purchased 맞는거 찾기
+    *
+    * */
+
     const productsMap = new Map();
-    let tempProduct = []
-    let unbuyItems = []
-    let result = ""
+    let bought = [];
+    let unpurchased = [];
+    let unpurchasedProperty = [];
+
 
     for (let i = 0; i < products.length; i++) {
         const product = products[i].split(" ");
@@ -14,40 +23,68 @@ const solution = (products, purchased) => {
             property += product[j];
         }
         productsMap.set(product[0], property);
-        tempProduct.push(product[0])
+        bought.push(product[0]);
     }
 
-    const unBoughtItem = tempProduct.filter(item => !purchased.includes(item))
+    console.log(1, productsMap);
+    console.log(2, bought);
 
-    let tempArr = []
+    unpurchased = bought.filter(item => !purchased.includes(item));
+    console.log(3, unpurchased);
+
+    let tempArr = [];
+    let purchasedPropertyMap = new Map();
+
     for (let i = 0; i < purchased.length; i++) {
-        const purchasedItemProperty = productsMap.get(purchased[i])
-        let purchasedSplit = purchasedItemProperty.split(" ")
-        for(let j = 0; j < purchasedSplit.length; j++){
-            tempArr.push(purchasedSplit[j])
+        const purchasedItemProperty = productsMap.get(purchased[i]);
+        let purchasedItemPropertySplit = purchasedItemProperty.split(" ");
+        for (let j = 0; j < purchasedItemPropertySplit.length; j++) {
+            tempArr.push(purchasedItemPropertySplit[j]);
+            if (purchasedPropertyMap.has(purchasedItemPropertySplit[j])) {
+                let value = purchasedPropertyMap.get(purchasedItemPropertySplit[j]);
+                purchasedPropertyMap.set(purchasedItemPropertySplit[j], value + 1);
+            } else {
+                purchasedPropertyMap.set(purchasedItemPropertySplit[j], 1);
+            }
         }
     }
-
-    const rs = tempArr.reduce((p,n) => {
-        const idx = p.map(i => i.key).findIndex(v => {
-            if ( v == n) return v
-        })
-        if ( idx > -1 ) {
-            p[idx].value += 1;
-            return p
+    let tempEntries = Array.from(purchasedPropertyMap);
+    // Sort the array by values first, then by keys if values are the same
+    tempEntries.sort((a, b) => {
+        // Compare values (a[1] and b[1])
+        if (a[1] !== b[1]) {
+            return b[1] - a[1]; // Sort by value
+        } else {
+            // If values are the same, compare keys (a[0] and b[0])
+            if (a[0] > b[0]) {
+                return 1;
+            } else if (a[0] < b[0]) {
+                return -1;
+            }
         }
-        else return [...p, {key: n, value: 1}]
-    }, []).sort((a, b) => {
-        if( a.value - b.value != 0) return   b.value - a.value
-        else {
-            return a.key - b.key
-        }
-    })
+    });
+    purchasedPropertyMap = new Map(tempEntries);
+    console.log(4, purchasedPropertyMap);
 
-    for(let i = 0 ; i< unBoughtItem.length ; i++){
-        const rr = productsMap.get(unBoughtItem[i])
-        const split =  rr.split(" ")
-    }
+
+    purchasedPropertyMap.forEach((value, key) => {
+        for (let i = 0; i < unpurchased.length; i++) {
+            let split = productsMap.get(unpurchased[i]).split(" ")
+            if(split.includes(key)){
+               break;
+            }
+        }
+    });
+
+
+
+
+
+
+    // for(let i = 0 ; i< unBoughtItem.length ; i++){
+    //     const rr = productsMap.get(unBoughtItem[i])
+    //     const split =  rr.split(" ")
+    // }
 
 
 };
