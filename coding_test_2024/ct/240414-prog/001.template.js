@@ -40,16 +40,11 @@ const solution = (num_teams, remote_tasks, office_tasks, employees) => {
                     // 기존 워커는 집에 가기
                     officeTeamMap.delete(teamNo);
                     resultTeam.push(tempMap.get(previousEmployee));
-
-
                 }
             }
             officeTeamMap.set(teamNo, employee)
             tempMap.set(employee, i+1)
         }
-
-
-
 
     }
     return resultTeam;
