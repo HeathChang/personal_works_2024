@@ -6,7 +6,6 @@ const solution = (products, purchased) => {
     * 1. 전체 products에서, 구매한 적이있는 purchased 를 빼서, unpurchased 찾기
     * 2. purchased에서 추천 목록 찾기
     * 3. unpurchased에서 purchased 맞는거 찾기
-    *
     * */
 
     const productsMap = new Map();
@@ -64,31 +63,26 @@ const solution = (products, purchased) => {
         }
     });
     purchasedPropertyMap = new Map(tempEntries);
-    console.log(4, purchasedPropertyMap);
 
+    let result = ''
+    let tempUnpurchased = [...unpurchased]
 
     purchasedPropertyMap.forEach((value, key) => {
         for (let i = 0; i < unpurchased.length; i++) {
             let split = productsMap.get(unpurchased[i]).split(" ")
-            if(split.includes(key)){
-               break;
+            if(!split.includes(key)){
+                const index = tempUnpurchased.indexOf(unpurchased[i])
+                tempUnpurchased.splice(index, 1)
+            }
+            if(tempUnpurchased.length === 1){
+                result = tempUnpurchased[0]
             }
         }
     });
 
-
-
-
-
-
-    // for(let i = 0 ; i< unBoughtItem.length ; i++){
-    //     const rr = productsMap.get(unBoughtItem[i])
-    //     const split =  rr.split(" ")
-    // }
-
-
+    return result;
 };
 
 console.log("result:: ", solution([ "sofa red long", "blanket blue long", "towel red", "mattress long", "curtain blue long cheap" ], [ "towel", "mattress", "curtain" ])); // "blanker"
-// console.log("result:: ", solution(["towel red long thin", "blanket red thick short", "curtain red long wide", "mattress thick", "hat red thin", "pillow red long", "muffler blue thick long"], ["blanket", "curtain", "hat", "muffler"])); // "towel
+console.log("result:: ", solution(["towel red long thin", "blanket red thick short", "curtain red long wide", "mattress thick", "hat red thin", "pillow red long", "muffler blue thick long"], ["blanket", "curtain", "hat", "muffler"])); // "towel
 
