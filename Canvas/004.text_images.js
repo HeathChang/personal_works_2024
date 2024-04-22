@@ -1,8 +1,6 @@
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 
-
-
 // 텍스트 그리기
 ctx.font = '24px Arial'; // 폰트 설정
 ctx.fillStyle = 'white'; // 텍스트 색상 설정
