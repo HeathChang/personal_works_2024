@@ -1,15 +1,30 @@
 import React from "react";
+import PropsExampleFunc from "./components/002-component/props-exmaple/props-example-func";
+// import Counter from "./components/002-component/state-example-func.jsx/state-example-class"; // Class Component
+import Counter from "./components/002-component/state-example-func.jsx/state-example-func"; // Func Component
 
-function App() {
-    const name = "리액트";
+const App = () => {
+    const name = "React";
     return (
-        <div>
-            {name === "리액트" ? (<h1> 리액트 입니다 </h1>) : (<h2>리액트가 아닙니다 </h2>)}
-            {name === "리액트" && (<h1>리액트 입니다2</h1>)}
-            {name === "뷰" && (<h1>리액트가 아닙니다</h1>)} {/* 노출되지 않음.*/}
-        </div>
-    );
-}
 
+        <div>
+            <div>
+                <h1>Props Example</h1>
+                0번째와 1번째 사이
+                <PropsExampleFunc name={name}/>
+                1번째와 2번째 사이
+                <PropsExampleFunc name="React Native"/>
+                2번째와 3번째 사이
+                <PropsExampleFunc/>
+                3번째와 4번째 사이
+                {/*<PropsExampleFunc name={3}/>*/}
+            </div>
+            ===================================================
+            <div>
+                <h1>State Example</h1>
+                <Counter/>
+            </div>
+        </div>);
+};
 
 export default App;
