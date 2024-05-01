@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 const IterationSample = () => {
     const [names, setNames] = useState([
         {id: 0, text: '민지'},
-        {id: 1, text: '혜린'},
+        {id: 1, text: '햬ㅈ린'},
         {id: 2, text: '하니'},
         {id: 3, text: '다니'},
         {id: 4, text: '혜인'},
@@ -13,11 +13,9 @@ const IterationSample = () => {
     const [nextId, setNextId] = useState(names.length);
 
     const onChange = e => setInputText(e.target.value);
+
     const onClick = () => {
-        const newName = names.concat({
-            id: nextId,
-            text: inputText
-        });
+        const newName = [...names, {id: nextId, text: inputText}];
         setNextId(nextId + 1);
         setNames(newName);
         setInputText('');
