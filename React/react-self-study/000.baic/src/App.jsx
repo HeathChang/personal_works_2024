@@ -1,15 +1,25 @@
 import React from 'react';
-import EventPractice from "./components/004-EventHandler/004-1-EventPractice/EventPracticeFunc";
-// import EventPractice from "./components/003-EventHandler/003-1-EventPractice/EventPracticeClass";
+import ScrollBox from "./components/005-ref/ScrollBoxClass";
 
 
-const App = () => {
-    return (
-        <div>
-            <EventPractice/>
-        </div>
-    )
+class App extends React.Component{
+    render(){
+        const onClickTop = () => {
+            this.scrollBox.scrollToTop();
+        }
 
+        const onClickBottom = () => {
+            this.scrollBox.scrollToBottom();
+        }
+        return (
+            <div>
+                {/* ScrollBox 컴포넌트에 ref 속성을 사용하여, this.scrollBox에 참조를 할당 */}
+                <ScrollBox ref={ref => this.scrollBox = ref}/>
+                <button onClick={onClickTop}>맨 위로</button>
+                <button onClick={onClickBottom}>맨 밑으로</button>
+            </div>
+        );
+    }
 
 
 };
