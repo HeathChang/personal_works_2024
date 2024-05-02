@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 
 function MyComponent() {
     const buttonRef = useRef(null); // useRef를 사용하여 버튼의 참조를 보관
