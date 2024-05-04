@@ -2,7 +2,7 @@ import React from "react";
 import ColorBox from "./000.basic/ColorBox";
 import ColorContext from "./000.basic/color";
 
-function App() {
+const App = () => {
     return (
         <div className="App">
             {/* Provider 를 사용하면 Context 의 value 를 변경 */}
