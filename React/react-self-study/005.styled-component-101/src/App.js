@@ -6,6 +6,7 @@ import ExtendingProps from "./views/003-extending-props/extending-props";
 import StylingAnyComponent from "./views/004-styling-any-component/styling-any-component";
 import PassedProps from "./views/005-passed-props/passed-props";
 import Animation from "./views/008-animation/animation";
+import Animation2 from "./views/008-animation/animation2";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <PassedProps/>
 
             <Animation/>
+            <Animation2/>
         </div>
     );
 }
