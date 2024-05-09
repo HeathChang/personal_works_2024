@@ -6,23 +6,28 @@ const SingleAmpersand = () => {
         color: blue;
 
         &:hover {
-            color: red; // <Thing> when hovered
+            // <Thing> when hovered
+            color: red;
         }
 
         & ~ & {
-            background: tomato; // <Thing> as a sibling of <Thing>, but maybe not directly next to it
+            // <Thing> as a sibling of <Thing>, but maybe not directly next to it
+            background: tomato; 
         }
 
         & + & {
-            background: lime; // <Thing> next to <Thing>
+            // <Thing> next to <Thing>
+            background: lime; 
         }
 
         &.something {
-            background: orange; // <Thing> tagged with an additional CSS class ".something"
+            // <Thing> tagged with an additional CSS class ".something"
+            background: orange;
         }
 
         .something-else & {
-            border: 1px solid; // <Thing> inside another element labeled ".something-else"
+            // <Thing> inside another element labeled ".something-else"
+            border: 1px solid; 
         }
     `;
 
