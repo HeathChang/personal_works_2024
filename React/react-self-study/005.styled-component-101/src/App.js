@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import GettingStarted from "./views/01-basic/001-getting-started/getting-started";
 import AdaptingProps from "./views/01-basic/002-adapting-props/adapting-props";
