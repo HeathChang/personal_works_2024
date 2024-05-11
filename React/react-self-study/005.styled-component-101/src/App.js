@@ -9,6 +9,9 @@ import Animation2 from "./views/01-basic/008-animation/animation2";
 import ComingFromCss from "./views/01-basic/006-coming-from-css/coming-from-css";
 import AttachingAdditionalProps from "./views/01-basic/007-attaching-additional-props/attaching-additional-props";
 import {Wrapper, H1, Main} from "./app.styles";
+import BasicTheming from "./views/02-advanced/001-theming/001-01.basic-theming";
+import FunctionThemes from "./views/02-advanced/001-theming/001-02.function-themes";
+import BasicRefs from "./views/02-advanced/002-refs/002-01.basic-refs";
 
 const App = () => {
     return (
@@ -28,6 +31,10 @@ const App = () => {
             </Wrapper>
             <Wrapper>
                 <H1> Advanced Usage</H1>
+                <br/>
+                <BasicTheming/>
+                <FunctionThemes/>
+                <BasicRefs/>
             </Wrapper>
 
         </Main>

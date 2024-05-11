@@ -7,27 +7,33 @@ const SingleAmpersand = () => {
 
         &:hover {
             // <Thing> when hovered
+            // Pretty nice day today 제외 전체
             color: red;
         }
 
         & ~ & {
             // <Thing> as a sibling of <Thing>, but maybe not directly next to it
+            // Dont' you think 에 해당
             background: tomato; 
         }
 
         & + & {
             // <Thing> next to <Thing>
+            // How ya doing 에 해당
             background: lime; 
         }
 
         &.something {
             // <Thing> tagged with an additional CSS class ".something"
+            // The Sun is Shining... 에 해당
             background: orange;
         }
 
         .something-else & {
             // <Thing> inside another element labeled ".something-else"
+            // splendid에 해당
             border: 1px solid; 
+            background: white;
         }
     `;
 
