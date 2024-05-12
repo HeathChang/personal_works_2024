@@ -18,7 +18,7 @@ const BasicTheming = () => {
             color: "#BF4F74",
             borderSize: "4px"
         }
-    }
+    };
 
 
     const theme = {
