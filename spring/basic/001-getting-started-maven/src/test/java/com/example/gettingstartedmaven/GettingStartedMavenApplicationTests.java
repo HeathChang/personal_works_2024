@@ -1,10 +1,10 @@
-package com.example.gettingstarted;
+package com.example.gettingstartedmaven;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GettingStartedApplicationTests {
+class GettingStartedMavenApplicationTests {
 
 	@Test
 	void contextLoads() {
