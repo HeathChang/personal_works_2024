@@ -10,17 +10,12 @@ import java.util.List;
 
 @Service
 public class TestService{
-//    @Autowired
-//    private UserMapper userMapper;
+    @Autowired
+    private UserMapper userMapper;
 
 
-
-//    public List<UserVO> getAllUsers() {
-//        List<UserVO> test = userMapper.getAllUsers();
-//        return test;
-//    }
-
-    public String Test(){
-        return "Hello";
+    public List<UserVO> Test(){
+        List<UserVO> test = userMapper.getAllUsers();
+        return test;
     }
 }
