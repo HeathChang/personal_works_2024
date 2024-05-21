@@ -1,41 +1,48 @@
 import styled from "styled-components";
 
-
 export const AppContainer = styled.div`
     * {
-        font-size: 1rem; /* Adjust font size based on your design */
+        font-size: 1rem;
+    }
 
+    .App {
+        margin: 0;
+        padding: 0;
+        height: 100vh; /* Use viewport height for full height */
+        font-family: Arial, sans-serif;
+        position: relative;
     }
     
-    .App-header{
+    .App-header {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        min-height: 60px; /* Ensure consistency with specified height */
+        height: 120px;
+        min-height: 60px;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         color: white;
-        border: 1px solid red; 
     }
     
-    .App-Body{
+    .App-Body {
+        position: absolute;
+        top: 120px;
+        left: 0;
+        right: 0;
+        bottom: 120px; 
         display: flex;
-        flex-direction: row;
-        border: 1px solid blue;
-        width: 100vw; /* 100% of the viewport width */
-        height: 100vh; /* 100% of the viewport height */
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
+        background: red;
+        height: 100%;
     }
     
-    .App-Footer{
-        width: 100%;
-        min-height: 50px; /* Ensure consistency with specified height */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid green;
+    .App-Footer {  
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; /* Use full width */
+        height: 120px;
+        background: green;
     }
-
 `;
