@@ -16,7 +16,7 @@ function App() {
                     <Header/>
                 </header>
                 <div className="App-Body">
-                    <NavBar/>
+                    {/*<NavBar/>*/}
                     <Router>
                         <Routes>
                             <Route path="*" element={<Home/>}/>

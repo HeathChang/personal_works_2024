@@ -1,11 +1,14 @@
 import React from "react";
-import * as H from "@/styles/pages/HomeStyles";
+import * as HomeStyles from "@/styles/pages/HomeStyles";
 
 const Home = () => {
     return (
-        <H.HomeContainer className="home-container">
-            HELLO WORLD
-        </H.HomeContainer>
+        <HomeStyles.HomeMain className="home-container">
+            <HomeStyles.HomeHeader>A</HomeStyles.HomeHeader>
+            <HomeStyles.HomeBody>A</HomeStyles.HomeBody>
+            <HomeStyles.HomeFooter>A</HomeStyles.HomeFooter>
+
+        </HomeStyles.HomeMain>
     )
 }
 

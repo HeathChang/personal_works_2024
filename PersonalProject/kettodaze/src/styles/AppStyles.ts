@@ -17,26 +17,34 @@ export const AppContainer = styled.div`
     }
     
     .App-header {
-        border: 1px solid red;
         padding: 20px;
         width: 100%;
-        height: 120px;
+        height: 80px;
         
         display: flex;
         align-items: center;
         justify-content: center;
         
         position: relative;
+        background: #000000;
 
     }
     
     .App-Body {
         padding: 20px;
-        border: 1px solid blue;
         position: relative;
+        
         width: 100%;
         height: 100%;
         clear: both;
+
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        
+
     }
     
     .App-Footer {

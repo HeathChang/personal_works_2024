@@ -13,7 +13,7 @@ export const HeaderMain = styled.div`
 export const Logo = styled.div`
     width: 100px;
     height: 100px;
-    background: black;
+    background: white;
 `
 
 export const UlButtons = styled.ul`
@@ -22,7 +22,7 @@ export const UlButtons = styled.ul`
 
     div {
         list-style-type: none;
-        color: black;
+        color: white;
         display: flex;
         align-items: center;
         justify-content: right;
