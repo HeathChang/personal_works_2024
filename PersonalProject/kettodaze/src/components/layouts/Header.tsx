@@ -3,19 +3,20 @@ import * as HeaderStyles from "@/styles/components/Header.styles";
 
 const Header = () => {
     return (
-        // <HeaderStyles.HeaderStyle>
-            <div className="Header-container">
+            <HeaderStyles.HeaderMain>
                 <HeaderStyles.Logo></HeaderStyles.Logo>
+                <HeaderStyles.SearchInput></HeaderStyles.SearchInput>
                 <HeaderStyles.UlButtons className="nav-buttons">
+
                     <div>
                         <li>H</li>
                         <li>H</li>
                         <li>H</li>
                         <li>H</li>
                     </div>
+
                 </HeaderStyles.UlButtons>
-            </div>
-        // </HeaderStyles.HeaderStyle>
+            </HeaderStyles.HeaderMain>
     )
 }
 

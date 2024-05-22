@@ -9,38 +9,40 @@ export const AppContainer = styled.div`
         margin: 0;
         padding: 0;
         height: 100vh; /* Use viewport height for full height */
+        width: 100%;
         font-family: Arial, sans-serif;
         position: relative;
+        max-width: calc(100% - 40px);
+        min-width: 700px;
     }
     
     .App-header {
-        position: absolute;
-        top: 0;
-        left: 0;
+        border: 1px solid red;
+        padding: 20px;
         width: 100%;
         height: 120px;
-        min-height: 60px;
+        
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
+        
+        position: relative;
+
     }
     
     .App-Body {
-        position: absolute;
-        top: 120px;
-        left: 0;
-        right: 0;
-        bottom: 120px; 
-        display: flex;
-        background: red;
+        padding: 20px;
+        border: 1px solid blue;
+        position: relative;
+        width: 100%;
         height: 100%;
+        clear: both;
     }
     
-    .App-Footer {  
-        position: absolute;
-        bottom: 0;
-        left: 0;
+    .App-Footer {
+        position: relative;
+        padding: 20px;
+
         width: 100%; /* Use full width */
         height: 120px;
         background: green;

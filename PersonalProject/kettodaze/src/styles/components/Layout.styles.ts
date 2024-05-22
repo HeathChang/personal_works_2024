@@ -5,6 +5,7 @@ export const NavbarContainer = styled.div`
     width: 240px;
     height: 100%;
     background: white;
+    border: 1px solid black;
     
     ul {
         list-style-type: none;
