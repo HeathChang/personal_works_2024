@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const AppContainer = styled.div`
     * {
-        font-size: 1rem;
+        //font-size: 1rem;
     }
 
     .App {
@@ -13,13 +13,13 @@ export const AppContainer = styled.div`
         font-family: Arial, sans-serif;
         position: relative;
         max-width: calc(100% - 40px);
-        min-width: 700px;
+        min-width: 1200px;
     }
     
     .App-header {
         padding: 20px;
         width: 100%;
-        height: 80px;
+        height: 40px;
         
         display: flex;
         align-items: center;
