@@ -19,6 +19,7 @@ export const HomeHeader = styled.div`
     flex: 1;
     border: 1px solid red;
     width: inherit;
+    //min-width: 1500px;
 
 
 `;
@@ -28,6 +29,8 @@ export const HomeBody = styled.div`
     flex: 1;
     border: 1px solid green;
     width: 100%;
+    //min-width: 1500px;
+
 `;
 
 
