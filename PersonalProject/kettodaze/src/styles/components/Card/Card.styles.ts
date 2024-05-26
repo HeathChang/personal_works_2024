@@ -21,6 +21,7 @@ export const SingleCardImage = styled.img<ImgHTMLAttributes<HTMLImageElement>>`
     width: 180px;
     height: 180px;
     border-radius: 8px;
+    border: 0.5px solid lightgray;
     
 `;
 
