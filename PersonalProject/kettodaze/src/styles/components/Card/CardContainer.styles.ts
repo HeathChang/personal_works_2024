@@ -15,4 +15,6 @@ export const InnerCardContainer = styled.div`
     padding: 0 30px;
     display: flex;
     gap: 20px;
+    overflow: hidden;
 `;
+
