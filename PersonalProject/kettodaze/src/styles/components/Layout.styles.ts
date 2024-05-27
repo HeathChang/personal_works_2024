@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
     text-align: center;
-    width: 240px;
+    width: 100%;
     height: 100%;
     background: white;
     border: 1px solid black;

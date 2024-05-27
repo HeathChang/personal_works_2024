@@ -16,16 +16,19 @@ function App() {
                     <Header/>
                 </header>
                 <div className="App-Body">
-                    {/*<NavBar/>*/}
-                    <Router>
-                        <Routes>
-                            <Route path="*" element={<Home/>}/>
-                        </Routes>
-                    </Router>
+                    <div className="app-nav-bar">
+                        <NavBar/>
+                    </div>
+                    <div className="app-router">
+                        Hello
+                    </div>
+
+                    {/*<Router>*/}
+                    {/*    <Routes>*/}
+                    {/*        <Route path="*" element={<Home/>}/>*/}
+                    {/*    </Routes>*/}
+                    {/*</Router>*/}
                 </div>
-                {/*<div className="App-Footer">*/}
-                {/*    <Footer/>*/}
-                {/*</div>*/}
             </div>
         </AppContainer>
     );

@@ -15,38 +15,58 @@ export const AppContainer = styled.div`
         max-width: calc(100% - 40px);
         min-width: 1200px;
     }
-    
+
     .App-header {
         padding: 20px;
         width: 100%;
         height: 40px;
-        
+
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         position: relative;
         background: #000000;
 
     }
-    
+
     .App-Body {
-        padding: 20px;
+        border: 1px solid blue;
+        margin: 20px;
         position: relative;
-        
+
         width: 100%;
         height: 100%;
+        
         clear: both;
 
         gap: 20px;
         display: flex;
-        align-items: center;
-        justify-content: center;
-
+        //align-items: center;
+        //justify-content: center;
         
+        .app-nav-bar{
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            flex: 0;
+            
+            min-width: 200px;
+            max-width: 200px;
+
+        }
+        
+        .app-router{
+            
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+
+        }
+
 
     }
-    
+
     .App-Footer {
         position: relative;
         padding: 20px;

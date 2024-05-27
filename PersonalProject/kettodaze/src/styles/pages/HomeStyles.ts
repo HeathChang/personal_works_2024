@@ -21,7 +21,6 @@ export const HomeHeader = styled.div`
     width: inherit;
     //min-width: 1500px;
 
-
 `;
 
 
@@ -30,7 +29,6 @@ export const HomeBody = styled.div`
     border: 1px solid green;
     width: 100%;
     //min-width: 1500px;
-
 `;
 
 
