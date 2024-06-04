@@ -1,39 +1,27 @@
 import styled from "styled-components";
 
 export const HomeMain = styled.div`
-    width: 100%;
+    width: inherit;
     height: 100%;
     text-align: center;
-    border: 1px solid black;
 
     display: flex;
     align-items: center;
     justify-content: center;
     
     flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-`;
-
-export const HomeHeader = styled.div`
-    flex: 1;
-    border: 1px solid red;
-    width: inherit;
-    //min-width: 1500px;
-
+    
 `;
 
 
 export const HomeBody = styled.div`
     flex: 1;
-    border: 1px solid green;
     width: 100%;
-    //min-width: 1500px;
+    margin-bottom: 40px;
 `;
 
 
 export const HomeFooter = styled.div`
     flex: 1;
-    border: 1px solid blue;
     width: 100%;
 `;

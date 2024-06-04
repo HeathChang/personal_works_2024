@@ -1,66 +1,58 @@
 import styled from "styled-components";
 
 export const AppContainer = styled.div`
-    * {
-        //font-size: 1rem;
+    
+    *{
+        font-family: Arial, sans-serif;
     }
-
+    
+    
     .App {
         margin: 0;
         padding: 0;
-        height: 100vh; /* Use viewport height for full height */
-        width: 100%;
-        font-family: Arial, sans-serif;
+        height: auto;
+        width: 100vw;
         position: relative;
-        max-width: calc(100% - 40px);
-        min-width: 1200px;
+        min-width: 1340px;
+        
+        display: flex;
+        flex-direction: column;
+        
+        gap: 10px;
     }
 
     .App-header {
-        padding: 20px;
+        margin: 0;
         width: 100%;
-        height: 40px;
-
+        min-width: 1340px;
+        height: 100px;
+        
         display: flex;
         align-items: center;
         justify-content: center;
-
-        position: relative;
-        background: #000000;
-
+        background: rgb(215, 35, 31);
     }
 
     .App-Body {
-        border: 1px solid blue;
-        margin: 20px;
-        position: relative;
-
+        margin: 0;
         width: 100%;
+        min-width: 1340px;
         height: 100%;
-        
         clear: both;
-
-        gap: 20px;
         display: flex;
-        //align-items: center;
-        //justify-content: center;
         
         .app-nav-bar{
-            width: 100%;
-            height: 100%;
-            padding: 20px;
             flex: 0;
-            
+            padding: 1em;
             min-width: 200px;
             max-width: 200px;
 
         }
-        
+
         .app-router{
-            
-            width: 100%;
+            padding: 1em;
             height: 100%;
-            padding: 20px;
+            
 
         }
 

@@ -5,18 +5,20 @@ export const NavbarContainer = styled.div`
     width: 100%;
     height: 100%;
     background: white;
-    border: 1px solid black;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    
     
     ul {
         list-style-type: none;
-        padding: 0;
+        padding: 40px 20px;
         margin: 0;
+        gap: 40px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
-
-    li{
-        margin-bottom: 8px; 
-    }
-
+    
 
     @media (max-width: 768px) {
         flex-direction: column;

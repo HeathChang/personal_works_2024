@@ -6,16 +6,16 @@ export const HeaderMain = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 `;
 
 
 export const Logo = styled.div`
     position: relative;
-    width: 120px;
+    width: 230px;
     height: 80px;
-    flex: 0.6;
-    //background: white;
+    //flex: 0.6;
+    
     
    h1{
        // font design

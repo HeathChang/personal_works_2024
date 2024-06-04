@@ -20,14 +20,14 @@ function App() {
                         <NavBar/>
                     </div>
                     <div className="app-router">
-                        Hello
+                        <Router>
+                            <Routes>
+                                <Route path="*" element={<Home/>}/>
+                            </Routes>
+                        </Router>
                     </div>
 
-                    {/*<Router>*/}
-                    {/*    <Routes>*/}
-                    {/*        <Route path="*" element={<Home/>}/>*/}
-                    {/*    </Routes>*/}
-                    {/*</Router>*/}
+
                 </div>
             </div>
         </AppContainer>

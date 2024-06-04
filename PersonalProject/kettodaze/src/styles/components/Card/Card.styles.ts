@@ -8,18 +8,18 @@ export const SingleCardContainer = styled.div`
     padding: 16px;
     background-color: white;
     height: max-content;
-    width: 200px;
-    //min-width: 200px;
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
     border-radius: 8px;
-
 `;
 
 
 
 
 export const SingleCardImage = styled.img<ImgHTMLAttributes<HTMLImageElement>>`
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     border-radius: 8px;
     border: 0.5px solid lightgray;
     
@@ -31,7 +31,8 @@ export const SingleCardUpper = styled.h3`
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
-    width: 180px;
+    width: inherit;
+    
     .title{
         text-align: left;
         overflow: hidden;
@@ -45,10 +46,10 @@ export const SingleCardUpper = styled.h3`
 `;
 
 export const SingleCardBody = styled.div`
-    height: max-content; 
-    
+    height: max-content;
+    width: inherit;
+
     .upper-desc{
-        width: 180px;
         height: 24px;
         margin-bottom: 8px;
         
@@ -66,7 +67,7 @@ export const SingleCardBody = styled.div`
     }
  
     .lower-desc{
-        width: 180px;
+        width: inherit;
         display: flex;
         justify-content: space-between;
         

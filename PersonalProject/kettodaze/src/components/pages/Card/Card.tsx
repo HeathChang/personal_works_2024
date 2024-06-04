@@ -11,7 +11,6 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = (props) => {
-    console.log(112, props.imgSrc)
     return (
             <CardStyles.SingleCardContainer>
                 <CardStyles.SingleCardImage src={props.imgSrc}/>

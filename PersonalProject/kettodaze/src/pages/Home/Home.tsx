@@ -9,15 +9,14 @@ const Home = () => {
 
     return (
         <HomeStyles.HomeMain className="home-container">
-            <HomeStyles.HomeHeader>
+            <HomeStyles.HomeBody>
                 <CardContainer title={headerTitle}></CardContainer>
-            </HomeStyles.HomeHeader>
+            </HomeStyles.HomeBody>
 
             <HomeStyles.HomeBody>
                 <CardContainer title={bodyTitle}></CardContainer>
             </HomeStyles.HomeBody>
 
-            <HomeStyles.HomeFooter></HomeStyles.HomeFooter>
 
         </HomeStyles.HomeMain>
     )
