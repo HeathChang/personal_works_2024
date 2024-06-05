@@ -5,7 +5,7 @@ export const OuterCardContainer = styled.div`
     border-radius: 8px;
     text-align: center;
     width: inherit;
-    padding: 30px 15px;
+    padding: 24px 24px;
 `;
 
 export const HeaderText = styled.h2`
@@ -18,10 +18,10 @@ export const HeaderText = styled.h2`
 
 export const InnerCardContainer = styled.div`
     color: black;
-    text-align: left;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Adjust the gap value as needed */
 
 `;
 

@@ -8,9 +8,9 @@ export const SingleCardContainer = styled.div`
     padding: 16px;
     background-color: white;
     height: max-content;
-    width: 150px;
-    min-width: 150px;
-    max-width: 150px;
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
     border-radius: 8px;
 `;
 
@@ -18,8 +18,8 @@ export const SingleCardContainer = styled.div`
 
 
 export const SingleCardImage = styled.img<ImgHTMLAttributes<HTMLImageElement>>`
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 8px;
     border: 0.5px solid lightgray;
     

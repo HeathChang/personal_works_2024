@@ -1,14 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 import Header from "@/components/layouts/Header";
 import NavBar from "@/components/layouts/NavBar";
 // import Footer from "@/components/layouts/Footer";
 import Home from "@/pages/Home/Home";
-import { AppContainer } from "@/styles/AppStyles"; // Adjust the path as necessary
+import {AppContainer} from "@/styles/AppStyles"; // Adjust the path as necessary
 
+const App: React.FC = () => {
+    const [activeItem, setActiveItem] = useState<string>('인기 갓챠');
+    const handleMouseEnter = (item: string) => {
+        setActiveItem(item);
+    }
 
-function App() {
+    const handleMouseLeave = () => {
+        setActiveItem('');
+    }
+
     return (
         <AppContainer>
             <div className="App">
@@ -17,7 +25,10 @@ function App() {
                 </header>
                 <div className="App-Body">
                     <div className="app-nav-bar">
-                        <NavBar/>
+                        <NavBar activeItem={activeItem}
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                        />
                     </div>
                     <div className="app-router">
                         <Router>
@@ -26,8 +37,6 @@ function App() {
                             </Routes>
                         </Router>
                     </div>
-
-
                 </div>
             </div>
         </AppContainer>
