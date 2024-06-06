@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: jpa-intro
+  datasource:
+    url: jdbc:mysql://localhost:3306/testdb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root1!
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl  # naming convention strategy :  ??? ????
+    generate-ddl: true # true, ddl-auto working
+    show-sql: true
+    open-in-view: false
+  data:
+    jdbc:
+      dialect: mysql
+
+logging:
+  level:
+    org:
+      hibernate:
+        orm:
+          jdbc:
+            bind: trace
+
