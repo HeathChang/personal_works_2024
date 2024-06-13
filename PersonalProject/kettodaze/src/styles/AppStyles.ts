@@ -18,41 +18,35 @@ export const AppContainer = styled.div`
         display: flex;
         flex-direction: column;
         
-        gap: 10px;
     }
 
     .App-header {
-        margin: 0;
+        
         width: 100%;
         min-width: 1340px;
-        height: 100px;
         
-        display: flex;
         align-items: center;
         justify-content: center;
-        background: rgb(215, 35, 31);
     }
 
     .App-Body {
         margin: 0;
         width: 100%;
         min-width: 1340px;
-        height: 100%;
+        
         clear: both;
         display: flex;
-        
-        .app-nav-bar{
-            flex: 0;
-            padding: 1em;
-            min-width: 200px;
-            max-width: 200px;
-
+        flex-direction: column;
+        gap: 140px;
+        .app-event{
+            height: 450px;
+            width: 100%;
+            background: lightpink;
         }
-
+        
         .app-router{
-            padding: 1em;
-            height: 100%;
-            
+            height: 750px;
+            width: 100%;
 
         }
 

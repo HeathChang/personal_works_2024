@@ -14,12 +14,12 @@ interface CardContainerProps {
     title: string;
 }
 
-const CardContainer: React.FC<CardContainerProps> = ({ title = "Default" }) => {
+const CardContainer: React.FC<CardContainerProps> = () => {
     return (
         <CardContainerStyles.OuterCardContainer className="OuterCardContainer">
-            <CardContainerStyles.HeaderText>{title}</CardContainerStyles.HeaderText>
+            {/*<CardContainerStyles.HeaderText>{title}</CardContainerStyles.HeaderText>*/}
             <CardContainerStyles.InnerCardContainer className="InnerContainer">
-                {/*<Card imgSrc={image1} title="산리오 친구들" icon="Hello" price="9,000" desc="안녕하세요. 제 이름은 히스입니다.  지금 켓토다제 프로젝트 진행중입니다. 안녕하세요. 제 이름은 히스입니다.  지금 켓토다제 프로젝트 진행중입니다. 안녕하세요. 제 이름은 히스입니다.  지금 켓토다제 프로젝트 진행중입니다. "/>*/}
+                <Card imgSrc={image1} title="산리오 친구들" icon="Hello" price="9,000" desc="안녕하세요. 제 이름은 히스입니다.  지금 켓토다제 프로젝트 진행중입니다. 안녕하세요. 제 이름은 히스입니다.  지금 켓토다제 프로젝트 진행중입니다. 안녕하세요. 제 이름은 히스입니다.  지금 켓토다제 프로젝트 진행중입니다. "/>
                 <Card imgSrc={image2} title="짱구 마치보우케" icon="Hello" price="9,000" desc="안녕하세요. 제 이름은 히스입니다. 지금 켓토다제 프로젝트 진행중입니다. "/>
                 <Card imgSrc={image3} title="짱구 캠핑" icon="Hello" price="9,000" desc="안녕하세요. 제 이름은 히스입니다. 지금 켓토다제 프로젝트 진행중입니다. "/>
                 <Card imgSrc={image5} title="짱구 오야스미가" icon="Hello" price="9,000" desc="안녕하세요. 제 이름은 히스입니다. 지금 켓토다제 프로젝트 진행중입니다. "/>

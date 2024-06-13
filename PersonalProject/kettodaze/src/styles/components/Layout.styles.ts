@@ -7,18 +7,18 @@ interface NavbarItemProps {
 export const NavbarContainer = styled.div`
     text-align: center;
     width: 100%;
-    height: 100%;
     background: white;
-    border: 1px solid lightgray;
     border-radius: 8px;
+    position: sticky;
+    margin: 10px 0 10px 0;
+
 `;
 
 export const NavbarList = styled.ul`
     list-style-type: none;
-    padding: 40px 20px;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     gap: 40px;
 

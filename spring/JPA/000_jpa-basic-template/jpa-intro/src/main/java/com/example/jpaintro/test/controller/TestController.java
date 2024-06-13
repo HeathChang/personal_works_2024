@@ -18,6 +18,7 @@ public class TestController {
 
     @GetMapping(value = "/")
     public List<UserDto> test() {
+        System.out.println("Hello World");
         return service.getAllUsers();
     }
 }

@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const HeaderMain = styled.div`
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 60px;
     display: flex;
     align-items: center;
     gap: 15px;
+    background: rgb(215, 35, 31);
+
 `;
 
 
@@ -15,8 +17,6 @@ export const Logo = styled.div`
     width: 230px;
     height: 80px;
     //flex: 0.6;
-    
-    
    h1{
        // font design
        width: 100%;

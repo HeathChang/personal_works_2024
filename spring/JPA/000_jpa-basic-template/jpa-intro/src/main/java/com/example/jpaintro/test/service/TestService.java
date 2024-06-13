@@ -22,8 +22,8 @@ public class TestService {
     private final UserQueryRepository userQueryRepository;
 
     public List<UserDto> getAllUsers() {
-        return userQueryRepository.findAllByQueryDsl();
-//                return repository.findAll().stream().map((element) -> modelMapper.map(element, UserDto.class)).collect(Collectors.toList());
+//        return userQueryRepository.findAllByQueryDsl();
+                return repository.findAll().stream().map((element) -> modelMapper.map(element, UserDto.class)).collect(Collectors.toList());
     }
 
 }

@@ -18,6 +18,10 @@ const Home = () => {
             </HomeStyles.HomeBody>
 
 
+            <HomeStyles.HomeBody>
+                <CardContainer title={bodyTitle}></CardContainer>
+            </HomeStyles.HomeBody>
+
         </HomeStyles.HomeMain>
     )
 }

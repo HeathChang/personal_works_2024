@@ -35,7 +35,7 @@ export const SingleCardUpper = styled.h3`
     
     .title{
         text-align: left;
-        overflow: hidden;
+        //overflow: hidden;
         font-weight: 700;
         font-size: 16px;
     }
