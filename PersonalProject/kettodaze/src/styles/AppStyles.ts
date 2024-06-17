@@ -27,6 +27,9 @@ export const AppContainer = styled.div`
         
         align-items: center;
         justify-content: center;
+        
+        position: sticky;
+        top: 0;
     }
 
     .App-Body {

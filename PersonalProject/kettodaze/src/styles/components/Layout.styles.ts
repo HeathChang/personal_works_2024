@@ -9,8 +9,7 @@ export const NavbarContainer = styled.div`
     width: 100%;
     background: white;
     border-radius: 8px;
-    position: sticky;
-    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
 
 `;
 
