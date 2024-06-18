@@ -4,4 +4,4 @@ const solution = (n) => {
     return n.split("")
 };
 
-console.log("result:: ", solution(Zbcdefg));
+console.log("result:: ", solution("Zbcdefg"));
