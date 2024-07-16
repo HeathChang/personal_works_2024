@@ -13,6 +13,7 @@
     list-style: none;
     justify-content: center;
     padding-top: 30px;
+    flex-wrap: wrap;
 }
 
 .notes-list-wrapper ul li {

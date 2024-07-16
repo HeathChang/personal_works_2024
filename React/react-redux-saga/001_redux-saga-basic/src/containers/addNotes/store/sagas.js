@@ -20,7 +20,6 @@ function* saveNotesSaga(action) {
 
     const headerParams = {
         'content-type': 'application/json',
-
     };
 
     const createFinalNotesData = {
@@ -40,7 +39,6 @@ function* saveNotesSaga(action) {
     } catch (error) {
         yield put(initSaveNotsValueFailed(true));
     }
-
     console.log('createFinalNotesData:: ', createFinalNotesData);
 }
 

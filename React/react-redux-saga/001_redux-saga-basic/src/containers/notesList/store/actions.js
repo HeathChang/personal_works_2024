@@ -17,9 +17,10 @@ export const fetchingGetListData = () => {
     };
 };
 
-export const fetchingGetListDataSuccess = () => {
+export const fetchingGetListDataSuccess = (notesListData) => {
     return {
-        type: FETCHING_GET_LIST_DATA_SUCCESS
+        type: FETCHING_GET_LIST_DATA_SUCCESS,
+        notesListData
     };
 };
 

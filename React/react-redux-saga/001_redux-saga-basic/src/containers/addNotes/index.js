@@ -18,6 +18,7 @@ const AddNotes = () => {
 
 
     useEffect(() => {
+        console.log(1, success)
         if (success) {
             setNotesName('');
             navigate('/');
