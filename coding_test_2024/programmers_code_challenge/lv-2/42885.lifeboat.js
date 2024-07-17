@@ -15,12 +15,12 @@ const solution = (people, limit) => {
 };
 
 // 2. 풀이
-// const solution = (people, limit) => {
-//     people.sort((a, b) => a - b);
+// const solution = (peoplePage, limit) => {
+//     peoplePage.sort((a, b) => a - b);
 //     let result = 0;
-//     let i = 0, j = people.length - 1;
+//     let i = 0, j = peoplePage.length - 1;
 //     while (i <= j) {
-//         if (people[i] + people[j] <= limit) i++;
+//         if (peoplePage[i] + peoplePage[j] <= limit) i++;
 //         j--;
 //         result++;
 //     }

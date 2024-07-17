@@ -1,0 +1,44 @@
+.people-wrapper{
+    border: 1px solid lightgray;
+    min-height: 80vh;
+
+    .people-input-wrapper{
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        input {
+            padding: 10px 20px;
+        }
+    }
+
+    .people-body-wrapper{
+        border: 1px solid orange;
+        min-height: 60vh;
+        margin-bottom: 10px;
+        display: flex;
+        gap: 10px;
+
+        :nth-child(1){
+            background: black;
+            flex: 1;
+        }
+
+        :nth-child(2){
+            background: red;
+            flex: 1;
+
+        }
+
+
+    }
+
+    .people-save-wrapper{
+        border: 1px solid yellow;
+        margin-bottom: 10px;
+
+        button {
+            padding: 10px 20px;
+        }
+    }
+}

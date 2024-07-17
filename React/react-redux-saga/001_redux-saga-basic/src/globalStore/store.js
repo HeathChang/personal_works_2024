@@ -7,7 +7,8 @@ import rootSaga from "./rootSaga";
 let sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
-    reducer: rootReducer, middleware: (getDefaultMiddleware) => [...getDefaultMiddleware({
+    reducer: rootReducer,
+    middleware: (getDefaultMiddleware) => [...getDefaultMiddleware({
         thunk: false, // redux-saga가 아닌 redux-thunk 사용할 경우
         serializableCheck: false
     }), sagaMiddleware // redux-saga 사용시

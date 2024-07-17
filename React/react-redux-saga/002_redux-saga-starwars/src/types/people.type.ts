@@ -1,4 +1,4 @@
-interface PeopleDTO {
+export interface PeopleDTO {
     name: string;
     height: string;
     mass: string;
@@ -16,3 +16,10 @@ interface PeopleDTO {
     edited: string;
     url: string;
 }
+
+export interface PeopleState {
+    people: PeopleDTO[] | null;
+    isLoading: boolean;
+    isError: boolean | null;
+}
+
