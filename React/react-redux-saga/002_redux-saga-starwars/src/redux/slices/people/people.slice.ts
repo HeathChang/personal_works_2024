@@ -2,7 +2,8 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {PeopleState, PeopleDTO} from "../../../types/people.type";
 
 const initialState: PeopleState = {
-    people: [],
+    person: null,
+    peopleList: [],
     isLoading: false,
     isError: null
 }
@@ -15,16 +16,41 @@ const peopleSlice = createSlice({
             state.isLoading = true;
             state.isError = null;
         },
-        fetchPeopleRequestSuccess(state: PeopleState, action: PayloadAction<PeopleDTO[]>) {
+        fetchPeopleRequestSuccess(state: PeopleState, action: PayloadAction<PeopleDTO>) {
             state.isLoading = false;
             state.isError = false;
-            state.people = [...action.payload];
+            state.person = action.payload;
         },
-        fetchPeopleRequestFailed(state, action: PayloadAction<null>) {
+        fetchPeopleRequestFailed(state) {
             state.isLoading = false;
             state.isError = true;
-            state.people = [];
-
+            state.person = null;
+        },
+        savePeopleRequest(state, action: PayloadAction<PeopleDTO>) {
+            state.isLoading = true;
+            state.isError = null;
+        },
+        savePeopleRequestSuccess(state: PeopleState) {
+            state.isLoading = false;
+            state.isError = false;
+        },
+        savePeopleRequestFailed(state: PeopleState) {
+            state.isLoading = false;
+            state.isError = true;
+        },
+        initSavedPeopleRequest(state) {
+            state.isLoading = true;
+            state.isError = null;
+        },
+        initSavedPeopleRequestSuccess(state: PeopleState, action: PayloadAction<PeopleDTO[]>) {
+            state.isLoading = false;
+            state.isError = false;
+            state.peopleList = action.payload;
+        },
+        initSavedPeopleRequestFailed(state) {
+            state.isLoading = false;
+            state.isError = true;
+            state.peopleList = null;
         }
     }
 })

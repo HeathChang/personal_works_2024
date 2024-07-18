@@ -18,7 +18,8 @@ export interface PeopleDTO {
 }
 
 export interface PeopleState {
-    people: PeopleDTO[] | null;
+    person?: PeopleDTO | null;
+    peopleList?: PeopleDTO[] | null;
     isLoading: boolean;
     isError: boolean | null;
 }

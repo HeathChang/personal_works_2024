@@ -1,40 +1,63 @@
-.people-wrapper{
+.people-wrapper {
     border: 1px solid lightgray;
     min-height: 80vh;
 
-    .people-input-wrapper{
+    .people-input-wrapper {
         margin: 10px 0;
         display: flex;
         justify-content: center;
         gap: 10px;
+
         input {
             padding: 10px 20px;
         }
     }
 
-    .people-body-wrapper{
-        border: 1px solid orange;
+    .people-body-wrapper {
         min-height: 60vh;
+        max-height: 60vh;
         margin-bottom: 10px;
         display: flex;
         gap: 10px;
 
-        :nth-child(1){
-            background: black;
+        .people-body-find {
+            border: .5px solid lightgray;
+            border-radius: 16px;
             flex: 1;
         }
 
-        :nth-child(2){
-            background: red;
+        .people-body-save {
+            border: .5px solid lightgray;
+            border-radius: 16px;
+            overflow: scroll;
             flex: 1;
+
+            ul{
+                padding: 20px;
+                display: flex;
+                gap: 15px;
+                list-style: none;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                li{
+                    width: 200px;
+                    height: 150px;
+                    background: black;
+                    color: #ffdd08;
+                    font-size: 20px;
+                    font-weight: bold;
+                    align-content: center;
+                    border-radius: 16px;
+                }
+            }
 
         }
 
 
     }
 
-    .people-save-wrapper{
-        border: 1px solid yellow;
+    .people-save-wrapper {
         margin-bottom: 10px;
 
         button {
