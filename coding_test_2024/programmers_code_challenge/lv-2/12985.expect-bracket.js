@@ -12,4 +12,3 @@ const solution = (n, a, b) => {
 };
 
 console.log("result:: ", solution(8, 4, 7)); //3
-console.log(Math.log2(8))
