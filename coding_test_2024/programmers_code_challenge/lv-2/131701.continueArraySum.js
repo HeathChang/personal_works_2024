@@ -1,21 +1,22 @@
 // URL > https://school.programmers.co.kr/learn/courses/30/lessons/131701
 
 const solution = (elements) => {
-    const n = elements.length;
-    const extendedElements = elements.concat(elements);
-    const uniqueSums = new Set();
+	const originLength = elements.length;
+	const arr = [...elements, ...elements];
+	let set = new Set();
 
-    for (let length = 1; length <= n; length++) {
-        for (let start = 0; start < n; start++) {
-            let sum = 0;
-            for (let k = 0; k < length; k++) {
-                sum += extendedElements[start + k];
-            }
-            uniqueSums.add(sum);
-        }
-    }
+	for (let i = 1; i < originLength; i++) {
+		for (let j = 0; j < originLength; j++) {
+			let sum = 0;
+			for (let k = 0; k < i; k++) {
+				sum += arr[j + k];
+			}
+			set.add(sum);
+		}
+	}
 
-    return uniqueSums.size;
+
+	return set.size;
 
 
 };
