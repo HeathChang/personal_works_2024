@@ -1,0 +1,11 @@
+08/26/2024
+1. Types of Test
+ - Unit Test : Test one unit of code in isolation
+ - Integration Test: How multiple units work together
+ - Functional Tests: Tests a particular function of sw.
+ - E2E : Use actual browser and server (via cypress)
+
+2. What does RTL do ?
+- Creates virtual DOM for testing and utils for interacting with DOM
+- Allows testing without a server.
+
