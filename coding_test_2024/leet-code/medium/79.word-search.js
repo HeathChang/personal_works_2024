@@ -26,7 +26,7 @@ const solution = (board, word) => {
 			dfs(i + 1, j + 1, index++) ||
 			dfs(i + 1, j - 1, index++) ||
 			dfs(i - 1, j + 1, index++) ||
-			dfs(i - 1, j - 1, index++);
+			dfs(i - 1, j - 1, index++)  ;
 
 		// 원상복구 (백트래킹)
 		board[i][j] = temp
