@@ -11,7 +11,7 @@ export const AppContainer = styled.div`
         margin: 0;
         padding: 0;
         height: auto;
-        width: 100vw;
+        width: 100%;
         position: relative;
         min-width: 1340px;
         
@@ -48,7 +48,6 @@ export const AppContainer = styled.div`
         }
         
         .app-router{
-            height: 750px;
             width: 100%;
 
         }

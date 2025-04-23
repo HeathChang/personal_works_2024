@@ -8,9 +8,8 @@ export const NavbarContainer = styled.div`
     text-align: center;
     width: 100%;
     background: white;
-    border-radius: 8px;
     padding: 10px 0 10px 0;
-
+    border: 1px solid red;
 `;
 
 export const NavbarList = styled.ul`
@@ -18,12 +17,9 @@ export const NavbarList = styled.ul`
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 40px;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-    }
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
 `;
 
 export const NavbarItem = styled.li<NavbarItemProps>`
