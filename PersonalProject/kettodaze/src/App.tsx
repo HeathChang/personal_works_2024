@@ -5,7 +5,8 @@ import NavBar from "@/components/layouts/NavBar";
 import Home from "@/pages/Home/Home";
 import {AppContainer} from "@/styles/AppStyles";
 import Gotcha from "@/pages/Gotcha/Gotcha.pages";
-import { RouterGroup } from "@/routes/RouteGroup"; // Adjust the path as necessary
+import { RouterGroup } from "@/routes/RouteGroup";
+import Layout from "@/components/layouts/Layout"; // Adjust the path as necessary
 
 const App: React.FC = () => {
     const [activeItem, setActiveItem] = useState<string>('인기 갓챠');
@@ -28,13 +29,16 @@ const App: React.FC = () => {
                             onMouseLeave={handleMouseLeave}
                     />
                 </header>
-                <div className="App-Body">
-                    <div className="app-event"></div>
-                    <div className="app-router">
-
-                        <RouterGroup/>
-                    </div>
-                </div>
+                <Layout>
+                    <RouterGroup/>
+                </Layout>
+                {/*<div className="App-Body">*/}
+                {/*    <div className="app-event"></div>*/}
+                {/*    <div className="app-router">*/}
+                {/**/}
+                {/**/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </AppContainer>
     );

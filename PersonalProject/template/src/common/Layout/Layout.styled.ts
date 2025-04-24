@@ -5,11 +5,11 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     height: 100vh;
-    //font: ${(props) => props.theme.colors.primary};
+    font: ${(props) => props.theme.colors.primary};
 `;
 
 export const Header = styled.header`
-    //background-color: ${(props) => props.theme.colors.wordle};
+    background-color: ${(props) => props.theme.colors.primary};
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -20,21 +20,19 @@ export const Header = styled.header`
 `;
 
 export const HeaderFont = styled.div`
-    // color: ${({ theme }) => theme.colors.white};
-    // font-size: ${({ theme }) => theme.fontSizes.sm};
-    // font-weight: ${({ theme }) => theme.fontWeights.semiBold};
+    color: ${({ theme }) => theme.colors.white};
+    font-size: ${({ theme }) => theme.fontSizes.sm};
+    font-weight: ${({ theme }) => theme.fontWeights.semiBold};
     flex: 2;
     text-align: center;
 `;
 
 export const Body = styled.main`
-    margin: 0;
-    width: 100%;
-    min-width: 1340px;
-
-    clear: both;
-    display: flex;
-    flex-direction: column;
-    gap: 140px;
-
+    flex: 1;
+    background-color: ${({ theme }) => theme.colors.white};
+    font-size: 1rem;
+    color: #333;
+    min-width: 450px;
+    height: 100%;
+    overflow: hidden;
 `;
