@@ -27,10 +27,3 @@ const solution = (s, numRows) => {
 
 const result = solution("PAYPALISHIRING", 3);
 console.log("result:: ", result);
-///
-
-/**
- * ```
-
- * ```
- * */
