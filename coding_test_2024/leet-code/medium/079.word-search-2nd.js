@@ -1,14 +1,7 @@
 // URL > https://leetcode.com/problems/word-search/description/?envType=problem-list-v2&envId=depth-first-search&
 
-// ```
-// 1. board의 모든 칸을 하나씩 탐색
-// 2. 현재 글자가 word[0]이면 DFS 시작
-// 3. DFS에서 상하좌우 이동하며 다음 글자 찾기
-// 4. 같은 칸은 다시 못 씀 -> 방문 표시
-// 5. 모든 글자를 순서대로 찾으면 true
-// 6. 다 뒤졌는데 없으면 false
-// ```;
 
+// SECOND ATTEMPT 0521
 const solution = (board, word) => {
 	const col = board.length;
 	const row = board[0].length;
@@ -36,8 +29,6 @@ const solution = (board, word) => {
 			if (board[i][j] === word[0]) return backTrack(i, j, 0);
 		}
 	}
-	return false;
 };
 
 console.log("result:: ", solution([["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]], "ABCCED"));
-console.log("result:: ", solution([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "SEE"));
