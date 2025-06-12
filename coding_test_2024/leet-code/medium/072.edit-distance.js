@@ -25,6 +25,7 @@ const solution = (word1, word2) => {
 			}
 		}
 	}
+	console.log(dp)
 	return dp[m][n];
 };
 
