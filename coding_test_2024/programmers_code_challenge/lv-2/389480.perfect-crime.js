@@ -22,13 +22,12 @@ const solution = (info, n, m) => {
 	// Second Attempt : Success
 	if (info.reduce((acc, cur) => acc = acc + cur[1], 0) < m) return 0;
 
-	const len = info.length;
 	const memo = new Map();
 	let minA = Infinity;
 
 	function dfs(i, aSum, bSum) {
-		if (aSum >= n || bSum >= m) return; // 잡힘
-		if (i === len) {
+		if(aSum >= n || bSum >= m) return;
+		if(i === info.length){
 			minA = Math.min(minA, aSum);
 			return;
 		}
