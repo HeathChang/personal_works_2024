@@ -5,19 +5,17 @@ const solution = (nums) => {
 	const returnArray = [];
 
 	const backTrack = (index, path) => {
-        returnArray.push([...path]);
+		returnArray.push([...path]);
 
-        for (let i = index; i < nums.length; i++) {
+		for (let i = index; i < nums.length; i++) {
 			path.push(nums[i]);
 			backTrack(i + 1, path);
-            console.log('before::',path)
 			path.pop();
-            console.log('after::',path)
 		}
 	};
-    backTrack(0, []);
+	backTrack(0, []);
 
-    return returnArray;
+	return returnArray;
 
 
 };
