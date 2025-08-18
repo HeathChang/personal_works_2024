@@ -18,7 +18,7 @@ const solution = (points) => {
 		return dfs(x + y, y) || dfs(x, y + x);
 	};
 
-	return dfs(1, a, b);
+	return dfs(a, b);
 };
 
 console.log("result:: ", solution([1, 1, 6, 4])); // false
