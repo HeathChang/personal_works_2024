@@ -3,7 +3,6 @@
 const solution = (n) => {
 	if (n.length % 2 !== 0 || [')', '}', ']'].includes(n[0])) return false;
 	const stackArr = [];
-	stackArr[0] = n[0];
 
 	for (let i = 0; i < n.length; i++) {
 		const prevIndex = stackArr.length - 1;
@@ -20,6 +19,6 @@ const solution = (n) => {
 
 };
 
-console.log("result:: ", solution("{}[]"));
-console.log("result:: ", solution("(([]){})"));
-console.log("result:: ", solution("(([]]{})"));
+console.log("result:: ", solution("{}[]")); // true
+console.log("result:: ", solution("(([]){})")); // true
+console.log("result:: ", solution("(([]]{})")); // false

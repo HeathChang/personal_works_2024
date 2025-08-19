@@ -41,12 +41,4 @@ const solution = (matrix) => {
     return result;
 };
 
-const result = solution([ [ 1, 2, 3, 4 ], [ 5, 6, 7, 8 ], [ 9, 10, 11, 12 ] ]);
-console.log("result:: ", result);
-///
-
-/**
- * ```
-
- * ```
- * */
+console.log("result:: ", solution([ [ 1, 2, 3, 4 ], [ 5, 6, 7, 8 ], [ 9, 10, 11, 12 ] ]));
